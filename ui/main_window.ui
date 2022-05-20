@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>465</width>
-    <height>277</height>
+    <width>380</width>
+    <height>160</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>windows关机定时器</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="comfirm_btn">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>160</y>
+      <x>270</x>
+      <y>50</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -26,6 +26,71 @@
     <property name="text">
      <string>确定</string>
     </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancel_btn">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>80</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消计划</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="input_config" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>231</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_shutdown">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>54</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>关机时间：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="shutdown_time">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>99999999</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sec">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>31</y>
+       <width>54</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>秒</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -33,12 +98,19 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>465</width>
+     <width>380</width>
      <height>23</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionabout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
